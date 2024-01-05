@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GigaChatAdapter", "GigaChatAdapter\GigaChatAdapter.csproj", "{545FD82C-66CA-4674-9E52-2A447348E7A0}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestGigaChatAdapter", "..\TestGigaChatOAuth\TestGigaChatAdapter.csproj", "{58A44E75-75EA-435F-8936-FE4DF059C2B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{545FD82C-66CA-4674-9E52-2A447348E7A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{545FD82C-66CA-4674-9E52-2A447348E7A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{545FD82C-66CA-4674-9E52-2A447348E7A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58A44E75-75EA-435F-8936-FE4DF059C2B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A44E75-75EA-435F-8936-FE4DF059C2B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A44E75-75EA-435F-8936-FE4DF059C2B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A44E75-75EA-435F-8936-FE4DF059C2B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
