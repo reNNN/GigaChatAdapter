@@ -6,6 +6,10 @@
     <Nullable>enable</Nullable>
     <AssemblyVersion>0.1.0</AssemblyVersion>
     <FileVersion>0.1.0</FileVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>reNNN</Authors>
+    <RepositoryUrl>https://github.com/reNNN/GigaChatAdapter</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>

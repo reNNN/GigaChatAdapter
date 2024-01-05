@@ -7,7 +7,7 @@ Console.InputEncoding = Encoding.GetEncoding(1251);
 Console.OutputEncoding = Encoding.GetEncoding(1251);
 
 //Set auth / Укажите аутентификационные данные из личного кабинета
-string authData = "authData==";
+string authData = "";
 
 //Auth method / Запуск авторизации в гигачате
 Authorization auth = new Authorization(authData, GigaChatAdapter.Auth.RateScope.GIGACHAT_API_PERS);
@@ -39,6 +39,8 @@ if (authResult.AuthorizationSuccess)
             Console.WriteLine(result.ErrorTextIfFailed);
         }
     }
+
+    
 }
 else
 {
