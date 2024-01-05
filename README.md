@@ -2,15 +2,20 @@
 
 
 **Capabilities**
-+ Easy to start to use GigaChat API. Only main classes and methods in root namespace. All helpers stored in child namespaces if you need set more details
-+ You can set all settings according official documentation https://developers.sber.ru/docs/ru/gigachat/api/reference
-+ The history can be saved (in file for example) and can be used in other sessions. Just load history before request prompt
+
+➕ Easy to start to use GigaChat API. Only main classes and methods in root namespace. All helpers stored in child namespaces if you need set more details
+
+➕ You can set all settings according official documentation https://developers.sber.ru/docs/ru/gigachat/api/reference
+
+➕ The history can be saved (in file for example) and can be used in other sessions. Just load history before request prompt
   ```cs-sharp
   Completion completion = new Completion();
   completion.History = {Your deserialized history}
   ```
-+ All errors wrapped in one request field **'ErrorTextIfFailed'**. It includes HttpErrors and GigaChat errors
-+ Dont worry about access token expiring. Just use method **'UpdateToken()'** before sending request prompt
+
+➕ All errors wrapped in one request field **'ErrorTextIfFailed'**. It includes HttpErrors and GigaChat errors
+
+➕ Dont worry about access token expiring. Just use method **'UpdateToken()'** before sending request prompt
 
 -------------------------
 <h2>Example</h2>
