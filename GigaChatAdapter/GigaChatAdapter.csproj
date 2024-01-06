@@ -15,7 +15,15 @@
     <Version>1.0.2</Version>
     <PackageId>GigaChatAdapter</PackageId>
     <Product>GigaChatAdapter .net Core</Product>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Text.Encoding.CodePages" Version="6.0.0" />
