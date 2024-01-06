@@ -27,12 +27,18 @@ if (authResult.AuthorizationSuccess)
         //update access token if expired / Обновление токена, если он просрочился
         await auth.UpdateToken();
 
+        //Set settings / установка доп.настроек
+        CompletionSettings settings = new CompletionSettings("GigaChat:latest", 2, null, 4);
+
         //request / отправка промпта
-        var result = await completion.SendRequest(auth.LastResponse.GigaChatAuthorizationResponse?.AccessToken, prompt, false);
+        var result = await completion.SendRequest(auth.LastResponse.GigaChatAuthorizationResponse?.AccessToken, prompt, true, settings);
 
         if (result.RequestSuccessed)
         {
-            Console.WriteLine(result.GigaChatCompletionResponse.Choices.LastOrDefault().Message.Content);
+            foreach (var it in result.GigaChatCompletionResponse.Choices)
+            {
+                Console.WriteLine(it.Message.Content);
+            }
         }
         else
         {

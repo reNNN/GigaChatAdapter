@@ -32,7 +32,7 @@ namespace GigaChatAdapter.Completions
         /// <param name="AccessToken">Access token.Requiered.</param>
         /// <param name="Prompt">Message to request AI</param>
         /// <exception cref="ArgumentNullException"></exception>
-        public CompletionRequest(string AccessToken, string Prompt) : this(AccessToken, new List<GigaChatMessage>())
+        public CompletionRequest(string AccessToken, string Prompt, CompletionSettings settings) : this(AccessToken, new List<GigaChatMessage>(), settings)
         {
             RequestData.MessageCollection = new List<GigaChatMessage>()
             {
@@ -47,10 +47,10 @@ namespace GigaChatAdapter.Completions
         /// <summary>
         /// Create request with message history
         /// </summary>
-        /// <param name="AccessToken">Access token.Requiered.</param>
+        /// <param name="AccessToken">Access token.Requiered</param>
         /// <param name="MessageHistory">Message history for sending to AI</param>
         /// <exception cref="ArgumentNullException"></exception>
-        public CompletionRequest(string AccessToken, IEnumerable<GigaChatMessage> MessageHistory)
+        public CompletionRequest(string AccessToken, IEnumerable<GigaChatMessage> MessageHistory, CompletionSettings settings)
         {
             if (string.IsNullOrEmpty(AccessToken))
             {
@@ -58,7 +58,16 @@ namespace GigaChatAdapter.Completions
             }
 
             this.AccessToken = AccessToken;
+
             RequestData = new GigaChatCompletionRequest() { MessageCollection = MessageHistory };
+
+            if (settings != null)
+            {
+                RequestData.Model = settings.Model;
+                RequestData.Temperature = settings.Temperature;
+                RequestData.TopP = settings.TopP;
+                RequestData.Count = settings.Count;
+            }
         }
 
         /// <summary>
