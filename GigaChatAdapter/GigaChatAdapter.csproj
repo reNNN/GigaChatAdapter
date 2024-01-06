@@ -4,14 +4,16 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyVersion>0.1.0</AssemblyVersion>
-    <FileVersion>0.1.0</FileVersion>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.1</FileVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>reNNN</Authors>
     <RepositoryUrl>https://github.com/reNNN/GigaChatAdapter</RepositoryUrl>
     <Description>GigaChat API easily. Unofficial .net library to use GigaChat by Sber in your apps. Example in GitHub project</Description>
     <PackageTags>GigaChat</PackageTags>
     <PackageProjectUrl>https://github.com/reNNN/GigaChatAdapter</PackageProjectUrl>
+    <Version>1.0.2</Version>
+    <PackageId>GigaChatAdapter .net Core</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
