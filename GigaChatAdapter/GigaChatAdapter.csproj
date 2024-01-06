@@ -13,7 +13,8 @@
     <PackageTags>GigaChat</PackageTags>
     <PackageProjectUrl>https://github.com/reNNN/GigaChatAdapter</PackageProjectUrl>
     <Version>1.0.2</Version>
-    <PackageId>GigaChatAdapter .net Core</PackageId>
+    <PackageId>GigaChatAdapter</PackageId>
+    <Product>GigaChatAdapter .net Core</Product>
   </PropertyGroup>
 
   <ItemGroup>
