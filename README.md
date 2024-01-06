@@ -1,4 +1,4 @@
-<h2>GigaChatAdapter .net Core</h2>
+<h2>GigaChatAdapter .net core</h2>
 
 
 **Capabilities**
