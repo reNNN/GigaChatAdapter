@@ -24,8 +24,8 @@ if (authResult.AuthorizationSuccess)
         //read prompt / Чтение промпта с консоли
         var prompt = Console.ReadLine();
 
-        //update access token if expired / Обновление токена, если он просрочился
-        await auth.UpdateToken();
+        //update access token if expired (reserveTime before expiring - 1 min)/ Обновление токена, если он просрочился (запас времени - 1 минута до просрочки)
+        await auth.UpdateToken(reserveTime: new TimeSpan(0, 1, 0));
 
         //Set settings / установка доп.настроек
         CompletionSettings settings = new CompletionSettings("GigaChat:latest", 2, null, 4);

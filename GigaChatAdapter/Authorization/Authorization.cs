@@ -59,10 +59,13 @@ namespace GigaChatAdapter
         /// </summary>
         /// <param name="RqUID">Authorization request ID</param>
         /// <param name="force">Set True to update token anyway (expiresAt value ignore). Set False to update token if it is expired only</param>
+        /// <param name="reserveTime">Timespan for updating before token will be expired. Default value = null (convert to TimeSpan.Zero)</param>
         /// <returns>Authorization response</returns>
-        public async Task<AuthorizationResponse> UpdateToken(Guid? RqUID = null, bool force = false)
+        public async Task<AuthorizationResponse> UpdateToken(Guid? RqUID = null, bool force = false, TimeSpan? reserveTime = null)
         {
-            if (force || LastResponse == null || LastResponse.GigaChatAuthorizationResponse?.ExpiresAtDateTime < DateTime.Now)
+            TimeSpan expiredTimeSpan = reserveTime ?? TimeSpan.Zero;
+
+            if (force || LastResponse == null || LastResponse.GigaChatAuthorizationResponse?.ExpiresAtDateTime - expiredTimeSpan < DateTime.Now)
             {
                 Guid _rqUID = RqUID ?? Guid.NewGuid();
                 LastRequest = new AuthorizationRequest(LastRequest.AuthorizationID, LastRequest.RateScope, _rqUID);
