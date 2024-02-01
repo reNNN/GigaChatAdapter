@@ -1,6 +1,5 @@
 <h2>GigaChatAdapter .net core</h2>
 
-
 **Capabilities**
 
 ➕ Easy to start to use GigaChat API. Only main classes and methods in root namespace. All helpers stored in child namespaces if you need set more details
@@ -25,6 +24,7 @@ The code example you can find below or in application "TestGigaChatAdapter"
 **Step 1: //Set auth / Укажите аутентификационные данные из личного кабинета**
 
 Below after code description how to get this authData in **Important!** tips
+
 ```cs-sharp
 string authData = "authData=="; // base64
 Authorization auth = new Authorization(authData, GigaChatAdapter.Auth.RateScope.GIGACHAT_API_PERS);
@@ -65,6 +65,7 @@ else
     Console.WriteLine(authResult.ErrorTextIfFailed);
 }
 ```
+
 ---------------------------------------
 <h2>Important!</h2>
 
@@ -77,6 +78,13 @@ Before using you should execute 3 steps:
 3) Access token lives only 30 mins. So use method UpdateToken() before sending request prompt
 ```cs-sharp
    auth.UpdateToken();
+```
+------------------------------
+**UPDATES**
+
+**V 1.0.5** - Now you can set **reserveTime** parameter when call **Authorization.Update()** method. It allows to update token before it expired. For example Authorization.Update() method can be called a millisecond before token ends. So just set reserveTime = 1 minute to update token if it expires less then 1 minute.
+```cs-sharp
+await auth.UpdateToken(reserveTime: new TimeSpan(0, 1, 0));
 ```
 ------------------------------
 It is the first version of dll that i create for self using. Then it will be updated as needed. Welcome if you can help to upgrade this library :)
