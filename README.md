@@ -25,6 +25,7 @@ The code example you can find below or in application "TestGigaChatAdapter"
 
 Below after code description how to get this authData in **Important!** tips
 
+```cs-sharp
 string authData = "authData=="; // base64
 Authorization auth = new Authorization(authData, GigaChatAdapter.Auth.RateScope.GIGACHAT_API_PERS);
 var authResult = await auth.SendRequest();
