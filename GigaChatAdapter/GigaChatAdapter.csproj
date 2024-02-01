@@ -12,7 +12,7 @@
     <Description>GigaChat API easily. Unofficial .net library for .NET Core to use GigaChat by Sber in your apps. Example in GitHub project</Description>
     <PackageTags>GigaChat; .NET Core</PackageTags>
     <PackageProjectUrl>https://github.com/reNNN/GigaChatAdapter</PackageProjectUrl>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <PackageId>GigaChatAdapter</PackageId>
     <Product>GigaChatAdapter .NET Core</Product>
     <PackageReadmeFile>README.md</PackageReadmeFile>
