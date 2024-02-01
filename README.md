@@ -47,7 +47,7 @@ if (authResult.AuthorizationSuccess)
         //update access token if expired / Обновление токена, если он просрочился
         await auth.UpdateToken();
 
-        //request / отправка промпта. Чтобы исключить историю переписки - необходимо в методе указать false в качестве последнего аргумента (по умолчанию UseHistory = true)
+        //request / отправка промпта. Чтобы исключить историю переписки - необходимо в методе указать false для аргумента UseHistory (по умолчанию UseHistory = true)
         var result = await completion.SendRequest(auth.LastResponse.GigaChatAuthorizationResponse?.AccessToken, prompt);
 
         if (result.RequestSuccessed)
