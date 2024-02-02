@@ -60,7 +60,7 @@
         /// <param name="temperature">Answer random range</param>
         /// <param name="topP">Range of most correct answer</param>
         /// <param name="count">Response message count</param>
-        /// <param name="c">Response message length</param>
+        /// <param name="maxTokens">Response message length</param>
         public CompletionSettings(string modelName, float? temperature, float? topP, long? count, long? maxTokens)
         {
             Model = modelName;
