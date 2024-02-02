@@ -49,6 +49,17 @@ namespace GigaChatAdapter.Completions
             set => _count = value == null ? null : value < 1 ? 1 : value > 4 ? 4 : value; //set range from 1 to 4. Set Null if value is null. Set '1' if value is less than 1. Set '4' if more than 4
         }
 
+        private long? _maxTokens;
+        /// <summary>
+        /// Maximum number of tokens that will be used to generate responses.
+        /// </summary>
+        [JsonPropertyName("max_tokens")]
+        public long? MaxTokens 
+        {
+            get => _maxTokens;
+            set => _maxTokens = value == null ? null : value < 1 ? 1 : value; //  Set Null if value is null. Set '1' if value is less than 1. 
+        }
+        
         /// <summary>
         /// Message (or message history) to send to AI.
         /// </summary>
