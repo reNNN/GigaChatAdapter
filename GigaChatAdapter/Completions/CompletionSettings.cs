@@ -43,6 +43,16 @@
             set => _count = value == null ? null : value < 1 ? 1 : value > 4 ? 4 : value; //set range from 1 to 4. Set Null if value is null. Set '1' if value is less than 1. Set '4' if more than 4
         }
 
+        private long? _maxTokens;
+        /// <summary>
+        /// Maximum number of tokens that will be used to generate responses.
+        /// </summary>
+        public long? MaxTokens 
+        {
+            get => _maxTokens;
+            set => _maxTokens = value == null ? null : value < 1 ? 1 : value; //  Set Null if value is null. Set '1' if value is less than 1. 
+        }
+
         /// <summary>
         /// Create instance of request settings
         /// </summary>
@@ -50,12 +60,14 @@
         /// <param name="temperature">Answer random range</param>
         /// <param name="topP">Range of most correct answer</param>
         /// <param name="count">Response message count</param>
-        public CompletionSettings(string modelName, float? temperature, float? topP, long? count)
+        /// <param name="maxTokens">Response message length</param>
+        public CompletionSettings(string modelName, float? temperature, float? topP, long? count, long? maxTokens)
         {
             Model = modelName;
             Temperature = temperature;
             TopP = topP;
             Count = count;
+            MaxTokens = maxTokens;
         }
     }
 }
