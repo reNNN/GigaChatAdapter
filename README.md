@@ -4,7 +4,7 @@
 
 ➕ Easy to start to use GigaChat API. Only main classes and methods in root namespace. All helpers stored in child namespaces if you need set more details
 
-➕ You can set all settings according official documentation https://developers.sber.ru/docs/ru/gigachat/api/reference
+➕ You can set all settings according official documentation [https://developers.sber.ru/docs/ru/gigachat/api/reference](https://developers.sber.ru/docs/ru/gigachat/api/reference/rest/gigachat-api)
 
 ➕ The history can be saved (in file for example) and can be used in other sessions. Just load history before request prompt
   ```cs-sharp
@@ -86,5 +86,11 @@ Before using you should execute 3 steps:
 ```cs-sharp
 await auth.UpdateToken(reserveTime: new TimeSpan(0, 1, 0));
 ```
+**V 1.0.7** - Add parameter **maxTokens** to **completions settings** (thanks to Amr0x64)
+```cs-sharp
+CompletionSettings settings = new CompletionSettings("GigaChat:latest", 2, null, 4, 1024);
+```
+
+
 ------------------------------
 It is the first version of dll that i create for self using. Then it will be updated as needed. Welcome if you can help to upgrade this library :)
