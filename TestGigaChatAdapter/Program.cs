@@ -28,7 +28,7 @@ if (authResult.AuthorizationSuccess)
         await auth.UpdateToken(reserveTime: new TimeSpan(0, 1, 0));
 
         //Set settings / установка доп.настроек
-        CompletionSettings settings = new CompletionSettings("GigaChat:latest", 2, null, 4);
+        CompletionSettings settings = new CompletionSettings("GigaChat:latest", 2, null, 4, 1);
 
         //request / отправка промпта
         var result = await completion.SendRequest(auth.LastResponse.GigaChatAuthorizationResponse?.AccessToken, prompt, true, settings);
